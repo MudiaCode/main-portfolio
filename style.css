@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@100;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap');
 * {
   margin: 0;
   padding: 0;
 
-  font-family: "JetBrains Mono", monospace;
+
+  font-family: 'JetBrains Mono', monospace;
 }
 
 body {
@@ -11,7 +13,7 @@ body {
   overflow-y: auto;
 }
 
-/* ---------------------------------------- NAVBAR --------------------------------------------*/
+/* *---------------------------------------- NAVBAR --------------------------------------------*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -89,11 +91,10 @@ body {
 .bar2,
 .bar3 {
   width: 35px;
-  height: 5px;
+  height: 4px;
   background-color: #1cdbfa;
   margin: 6px 0;
   transition: 0.4s;
-  border-radius: 3px;
 }
 
 /* Rotate first bar */
@@ -112,14 +113,27 @@ body {
 }
 
 /* responsive navbar */
-
+/* * mobile */
 @media (max-width: 742px) {
   .nav-links ul li {
     display: none;
   }
+  .navbar img {
+    width: 2.5rem;
+    transition: all 0.3s ease-out;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 2rem;
+    height: 0.3rem;
+  }
+  
 
 }
 
+/* * desktop */
 @media (min-width: 743px) {
   .hamburger {
     display: none;
@@ -127,6 +141,8 @@ body {
   .hamburger-menu {
     visibility: hidden;
   }
+
+
 
 
 }
@@ -173,18 +189,52 @@ list-style: none;
   display: block;
 }
 
-/* ---------------------------------------- HEADER --------------------------------------------*/
+/* *---------------------------------------- HEADER --------------------------------------------*/
 
 header {
   background-color: #232323;
-  height: 100vh;
-
-  font-size: 1.8rem;
+  height: calc(100vh - 10rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.8vw;
   text-align: center;
+  
 }
 
 
-.header {
-  font-size: 1.8rem;
-  text-align: center;
+
+.hi {
+  color: white;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #1cdbfa; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.job {
+  color: grey;
+  margin: 1rem 16em;
+  font-size: 1.5vw;
+}
+
+.job-title{
+  color: #1cdbfa;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #1cdbfa; }
 }
