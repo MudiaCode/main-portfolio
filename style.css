@@ -11,7 +11,7 @@ body {
   overflow-y: auto;
 }
 
-/* NAVBAR */
+/* ---------------------------------------- NAVBAR --------------------------------------------*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -117,19 +117,27 @@ body {
   .nav-links ul li {
     display: none;
   }
+
 }
 
 @media (min-width: 743px) {
   .hamburger {
     display: none;
   }
+  .hamburger-menu {
+    visibility: hidden;
+  }
+
+
 }
 
 .hamburger-menu {
   display: none;
   cursor: pointer;
   background-color: #232323;
-  padding: 0rem 2rem 2rem 2rem;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 .hamburger-menu li {
@@ -148,6 +156,7 @@ list-style: none;
   padding: 2rem;
   list-style: none;
   transition: all 0.25s ease-out;
+  font-size: 20px;
 }
 
 .item:hover {
@@ -162,4 +171,20 @@ list-style: none;
 
 .show {
   display: block;
+}
+
+/* ---------------------------------------- HEADER --------------------------------------------*/
+
+header {
+  background-color: #232323;
+  height: 100vh;
+
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+
+.header {
+  font-size: 1.8rem;
+  text-align: center;
 }
